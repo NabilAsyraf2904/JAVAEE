@@ -2,7 +2,7 @@ package Day6;
 
 import java.util.Scanner;
 
-public class NestingWhile {
+public class NestingLoop {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
