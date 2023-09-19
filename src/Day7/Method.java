@@ -2,8 +2,8 @@ package Day7;
 
 import java.util.Scanner;
 
-//---------------------------------------Before link with next method ---------------------------------------------//
-//++++++++++++++++++++++++++++++++End method without link from other method++++++++++++++++++++++++++++++++++++++++//
+//---------------------------------------Before link with next method ---------------------------------------------\\
+//++++++++++++++++++++++++++++++++End method without link from other method++++++++++++++++++++++++++++++++++++++++\\
 
 public class Method {
 	
@@ -12,14 +12,20 @@ public class Method {
 	public static void main(String[] args) 
 	{
 		
-		//printSign(Integer.parseInt(sc.nextLine()));
-		System.out.print(  "Triangle : ");
-		int n = sc.nextInt();
-		printTriangle(n);
-
+				printSign(Integer.parseInt(sc.nextLine()));
+				System.out.print(  "Triangle : ");
+				int n = sc.nextInt();
+				printTriangle(n);
+				Double width = Double.parseDouble(sc.nextLine());
+				Double height = Double.parseDouble(sc.nextLine());
+				Double area = calculateRectangleArea(width, height);
+				System.out.printf("The area of the rectangle : %.0f%n", area);
+				mathPower(3, 2);
+		
+		
 	}
 
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\\
 	
 	public static void printSign(int number)
 	{
@@ -34,9 +40,11 @@ public class Method {
 			System.out.printf("The number %d is zero", number);
 		}
 		
+		//		3
+		//		The number 3 is positive.
 	}
 	
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\\
 	
 	public static void printLine(int start, int end)
 	{
@@ -48,7 +56,7 @@ public class Method {
 		System.out.println();
 	}
 	
-//--------------------------------------------------------------------------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------\\
 	
 	public static void printTriangle(int n)
 	{
@@ -61,8 +69,56 @@ public class Method {
 		{
 			printLine(1, line);
 		}
+		
+		//		Triangle : 12
+		//		1 
+		//		1 2 
+		//		1 2 3 
+		//		1 2 3 4 
+		//		1 2 3 4 5 
+		//		1 2 3 4 5 6 
+		//		1 2 3 4 5 6 7 
+		//		1 2 3 4 5 6 7 8 
+		//		1 2 3 4 5 6 7 8 9 
+		//		1 2 3 4 5 6 7 8 9 10 
+		//		1 2 3 4 5 6 7 8 9 10 11 
+		//		1 2 3 4 5 6 7 8 9 10 11 12 
+		//		1 2 3 4 5 6 7 8 9 10 11 
+		//		1 2 3 4 5 6 7 8 9 10 
+		//		1 2 3 4 5 6 7 8 9 
+		//		1 2 3 4 5 6 7 8 
+		//		1 2 3 4 5 6 7 
+		//		1 2 3 4 5 6 
+		//		1 2 3 4 5 
+		//		1 2 3 4 
+		//		1 2 3 
+		//		1 2 
+		//		1 
 	}
 	
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\\
 
+	public static double calculateRectangleArea(double width, double height)
+	{
+		return width * height;
+		//		3
+		//		5
+		//		The area of the rectangle : 15
+	}
+	
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\\
+	
+	public static double mathPower(double number, int power)
+	{
+		double result = 1;
+		for (int i = 0; i < power; i++) 
+		{
+			result *= number;
+		}
+		System.out.println(result);
+		return result;
+		//		9.0
+	}
+	
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\\
 }
