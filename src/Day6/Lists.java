@@ -16,12 +16,12 @@ public class Lists {
 	public static void main(String[] args)
 	{
 		
-		//		arrayList();
-		//		collectList();
-		//		listForLoop();
-		//		sumAdjacent();
-		//		gaussTrick();
-		//		mergingList();
+				arrayList();
+				collectList();
+				listForLoop();
+				sumAdjacent();
+				gaussTrick();
+				mergingList();
 				sortingList();
 
 	}
