@@ -16,13 +16,13 @@ public class Lists {
 	public static void main(String[] args)
 	{
 		
-//		arrayList();
-//		collectList();
-//		listForLoop();
-//		sumAdjacent();
-//		gaussTrick();
-//		mergingList();
-		sortingList();
+		//		arrayList();
+		//		collectList();
+		//		listForLoop();
+		//		sumAdjacent();
+		//		gaussTrick();
+		//		mergingList();
+				sortingList();
 
 	}
 	
@@ -41,7 +41,7 @@ public class Lists {
 		{
 			System.out.print(nums.get(i) + " ");
 		}
-//			-100 10 20 50 60 100 
+		//			-100 10 20 50 60 100 
 	}
 	
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//	
@@ -58,11 +58,11 @@ public class Lists {
 			nums.add(Integer.parseInt(items.get(i)));
 			System.out.println("arr["+ i + "] = " + items.get(i));
 		}
-//			2 35 126 2
-//			arr[0] = 2
-//			arr[1] = 35
-//			arr[2] = 126
-//			arr[3] = 2
+		//			2 35 126 2
+		//			arr[0] = 2
+		//			arr[1] = 35
+		//			arr[2] = 126
+		//			arr[3] = 2
 	}
 	
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//	
@@ -71,19 +71,20 @@ public class Lists {
 	{
 		List<String> list = new ArrayList<>(Arrays.asList("one", "two", "three", "four", "five", "six"));
 		
-		for (int index = 0; index < list.size(); index++) {
+		for (int index = 0; index < list.size(); index++) 
+		{
 			System.out.printf("arr[%d] = %s%n", index, list.get(index));
 		} 
-//			arr[0] = one
-//			arr[1] = two
-//			arr[2] = three
-//			arr[3] = four
-//			arr[4] = five
-//			arr[5] = six
+		//			arr[0] = one
+		//			arr[1] = two
+		//			arr[2] = three
+		//			arr[3] = four
+		//			arr[4] = five
+		//			arr[5] = six
 		
 		System.out.println(String.join(", ", list)); 
 		
-//			one, two, three, four, five, six
+		//			one, two, three, four, five, six
 	}
 	
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
@@ -94,8 +95,10 @@ public class Lists {
 		
 		List<Double> numbers = Arrays.stream(sc.nextLine().split(" ")).map(Double ::parseDouble).collect(Collectors.toList());
 		
-		for (int i = 0; i < numbers.size() - 1; i++) {
-			if (numbers.get(i).equals(numbers.get(i + 1))) {
+		for (int i = 0; i < numbers.size() - 1; i++) 
+		{
+			if (numbers.get(i).equals(numbers.get(i + 1))) 
+			{
 				numbers.set(i, numbers.get(i) + numbers.get(i + 1)); 
 				numbers.remove(i + 1);
 				i = -1;
@@ -114,13 +117,14 @@ public class Lists {
 	{
 		String output = "";
 		
-		for (Double item : items) {
+		for (Double item : items) 
+		{
 			output += (new DecimalFormat("0.#").format(item) + delimiter);
 			
 		}return output;
 		
-//			5 2 2 4 6 3 3 45
-//			5 8 12 45 
+		//			5 2 2 4 6 3 3 45
+		//			5 8 12 45 
 	}
 	
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
@@ -133,15 +137,16 @@ public class Lists {
 		
 		int size = numbers.size();
 		
-		for (int i = 0; i < size / 2; i++) {
+		for (int i = 0; i < size / 2; i++) 
+		{
 			numbers.set(i, numbers.get(i) + numbers.get(numbers.size() - 1));
 			numbers.remove(numbers.size() - 1);
 		}
 		System.out.println(numbers.toString().replaceAll("[\\[\\],]", ""));
 	}
 	
-//			1 2 3 4 5
-//			6 6 3
+	//			1 2 3 4 5
+	//			6 6 3
 	
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 	
@@ -152,18 +157,21 @@ public class Lists {
 		List<Integer> nums1 = Arrays.stream(sc.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
 		List<Integer> nums2 = Arrays.stream(sc.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
 		List<Integer> resNums = new ArrayList<>();
-		for (int i = 0; i < Math.min(nums1.size(), nums2.size()); i++) {
+		for (int i = 0; i < Math.min(nums1.size(), nums2.size()); i++) 
+		{
 			resNums.add(nums1.get(i));
 			resNums.add(nums2.get(i));
 		}
 		
-		if (nums1.size() > nums2.size()) {
+		if (nums1.size() > nums2.size()) 
+		{
 			resNums.addAll(getRemainingElements(nums1, nums2));
-		} else if (nums2.size() > nums1.size()) {
+		} else if (nums2.size() > nums1.size()) 
+		{
 			resNums.addAll(getRemainingElements(nums2, nums1));
 		}
 
-//		System.out.println(resNums.toString());
+		//		System.out.println(resNums.toString());
 		System.out.println(resNums.toString().replaceAll("[\\[\\],]", ""));
 	}
 	
@@ -175,14 +183,15 @@ public class Lists {
 	{
 		List<Integer> nums = new ArrayList<>();
 		
-		for (int i = shorterList.size(); i < longerList.size(); i++) {
+		for (int i = shorterList.size(); i < longerList.size(); i++) 
+		{
 			nums.add(longerList.get(i));
 		}
 		
 		return nums;
-//			1 2 3 4
-//			1 2 3
-//			1 1 2 2 3 3 4
+		//			1 2 3 4
+		//			1 2 3
+		//			1 1 2 2 3 3 4
 	}
 	
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
