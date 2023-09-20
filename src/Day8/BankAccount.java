@@ -90,9 +90,11 @@ public class BankAccount
 	{
 		//BankAccount ID = new BankAccount();
 		List<BankAccount> accounts = new ArrayList<BankAccount>();
-		END: {
+		END: 
+		{
 			while (true)
 			{
+				System.out.print("Command : ");
 				String[] command = scanner.nextLine().split(" ");
 			
 				switch (command[0]) 
@@ -127,7 +129,8 @@ public class BankAccount
 					case "calc-interest":
 					{
 						double rate = 0;
-						for (BankAccount account : accounts) {
+						for (BankAccount account : accounts) 
+						{
 							if (account.getId() == Integer.parseInt(command[1])) 
 							{
 								rate = account.calcInterestRate(Integer.parseInt(command[2]));
