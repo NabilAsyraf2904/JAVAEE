@@ -5,7 +5,8 @@ import java.util.LinkedList;
 
 public class SwapProb {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		
 		LinkedList<String> l_list = new LinkedList<String>();
 		
