@@ -12,7 +12,7 @@ public class javaAPIClasses {
 	{
 		//randomPredictable();
 		//rangeRandom();
-		interestCalculator();
+		//interestCalculator();
 
 	}
 
@@ -45,6 +45,8 @@ public class javaAPIClasses {
 		System.out.println(String.format("|%6d|", randomNum));
 	}
 	
+//------------------------------------------------------------------------------------------\\
+	
 	public static void interestCalculator()
 	{
 		System.out.print("initialAmount: ");
@@ -56,6 +58,12 @@ public class javaAPIClasses {
 		
 		System.out.println("-----------------------------");
 		System.out.println("Total amount: " + total);
+		
+		//		input  : 50
+		//				  6.3
+		//		output: 53.150
 	}
+	
+//------------------------------------------------------------------------------------------\\
 	
 }
